@@ -13,3 +13,10 @@ def solution(my_string):
         answer += int(n)
 
     return answer
+
+
+
+#다른 풀이 : 문자는 공백으로
+def solution(my_string):
+    numbers = ''.join(i if i.isdigit() else ' ' for i in my_string)
+    return sum(int(i) for i in numbers.split())
